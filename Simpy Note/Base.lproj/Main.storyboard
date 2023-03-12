@@ -126,11 +126,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vgR-mY-EII" id="Sw9-Ux-9X7"/>
+                                </connections>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQV-cO-oys">
                                 <rect key="frame" x="25.000000000000004" y="100" width="55.333333333333343" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vgR-mY-EII" id="Qs3-Vc-T61"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UtO-ZA-t4e"/>
@@ -157,6 +163,7 @@
                     <connections>
                         <outlet property="addedDateLabel" destination="c2s-L8-T6v" id="Epg-ff-240"/>
                         <outlet property="descriptionTextField" destination="29c-xM-imO" id="r0T-6r-dyP"/>
+                        <outlet property="saveBtn" destination="AKh-ot-AcR" id="Nkg-5P-XYh"/>
                         <outlet property="titleTextField" destination="SQV-cO-oys" id="Xum-zQ-SCN"/>
                     </connections>
                 </viewController>
@@ -192,10 +199,10 @@
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
-            <color red="0.9882352941176471" green="0.74117647058823533" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackgroundColor">
-            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

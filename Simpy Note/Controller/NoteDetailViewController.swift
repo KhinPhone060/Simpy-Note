@@ -14,6 +14,7 @@ class NoteDetailViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var addedDateLabel: UILabel!
     @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var saveBtn: UIButton!
     
     var notes = [Note]()
     
@@ -30,10 +31,33 @@ class NoteDetailViewController: UIViewController {
         titleTextField.text = noteTitle
         descriptionTextField.text = noteDescription
         addedDateLabel.text = addedDate ?? getTodayDate()
+        
+        saveBtn.isEnabled = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        saveNotes()
+        if titleTextField.text != "" || descriptionTextField.text != "" {
+            saveNotes()
+        }
+    }
+}
+
+//MARK: - UITextFieldDelegate & UITextViewDelegate
+extension NoteDetailViewController: UITextFieldDelegate, UITextViewDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if titleTextField.text != "" {
+            saveBtn.isEnabled = true
+        } else {
+            saveBtn.isEnabled = false
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if descriptionTextField.text != "" {
+            saveBtn.isEnabled = true
+        } else {
+            saveBtn.isEnabled = false
+        }
     }
 }
 
