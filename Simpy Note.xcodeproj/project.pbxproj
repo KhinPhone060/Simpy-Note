@@ -7,25 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E486AD2A3E9CB55CA5D3D9F /* Pods_Simpy_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7984A8383A3BB8FA5DD8E1B3 /* Pods_Simpy_Note.framework */; };
 		F725E31B29BDB6B3006489DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31A29BDB6B3006489DC /* AppDelegate.swift */; };
 		F725E31D29BDB6B3006489DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31C29BDB6B3006489DC /* SceneDelegate.swift */; };
-		F725E31F29BDB6B3006489DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31E29BDB6B3006489DC /* ViewController.swift */; };
+		F725E31F29BDB6B3006489DC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31E29BDB6B3006489DC /* NoteViewController.swift */; };
 		F725E32229BDB6B3006489DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F725E32029BDB6B3006489DC /* Main.storyboard */; };
 		F725E32529BDB6B3006489DC /* Simpy_Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F725E32329BDB6B3006489DC /* Simpy_Note.xcdatamodeld */; };
 		F725E32729BDB6B4006489DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F725E32629BDB6B4006489DC /* Assets.xcassets */; };
 		F725E32A29BDB6B4006489DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F725E32829BDB6B4006489DC /* LaunchScreen.storyboard */; };
+		F725E33329BDBA17006489DC /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E33229BDBA17006489DC /* TaskViewController.swift */; };
+		F725E33829BDBDAF006489DC /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E33629BDBDAF006489DC /* NoteTableViewCell.swift */; };
+		F725E33929BDBDAF006489DC /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725E33729BDBDAF006489DC /* NoteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7984A8383A3BB8FA5DD8E1B3 /* Pods_Simpy_Note.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simpy_Note.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8794AABDF0D682CE7ED22E8F /* Pods-Simpy Note.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpy Note.release.xcconfig"; path = "Target Support Files/Pods-Simpy Note/Pods-Simpy Note.release.xcconfig"; sourceTree = "<group>"; };
+		F6F50110833835F2C8017816 /* Pods-Simpy Note.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpy Note.debug.xcconfig"; path = "Target Support Files/Pods-Simpy Note/Pods-Simpy Note.debug.xcconfig"; sourceTree = "<group>"; };
 		F725E31729BDB6B3006489DC /* Simpy Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simpy Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F725E31A29BDB6B3006489DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F725E31C29BDB6B3006489DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F725E31E29BDB6B3006489DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F725E31E29BDB6B3006489DC /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		F725E32129BDB6B3006489DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F725E32429BDB6B3006489DC /* Simpy_Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simpy_Note.xcdatamodel; sourceTree = "<group>"; };
 		F725E32629BDB6B4006489DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F725E32929BDB6B4006489DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F725E32B29BDB6B4006489DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F725E33229BDBA17006489DC /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		F725E33629BDBDAF006489DC /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		F725E33729BDBDAF006489DC /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E486AD2A3E9CB55CA5D3D9F /* Pods_Simpy_Note.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A9E301BBA82E61A3EC391C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7984A8383A3BB8FA5DD8E1B3 /* Pods_Simpy_Note.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C06C33AC76478E2D0E652A98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6F50110833835F2C8017816 /* Pods-Simpy Note.debug.xcconfig */,
+				8794AABDF0D682CE7ED22E8F /* Pods-Simpy Note.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F725E30E29BDB6B3006489DC = {
 			isa = PBXGroup;
 			children = (
 				F725E31929BDB6B3006489DC /* Simpy Note */,
 				F725E31829BDB6B3006489DC /* Products */,
+				C06C33AC76478E2D0E652A98 /* Pods */,
+				2A9E301BBA82E61A3EC391C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +90,8 @@
 			children = (
 				F725E31A29BDB6B3006489DC /* AppDelegate.swift */,
 				F725E31C29BDB6B3006489DC /* SceneDelegate.swift */,
-				F725E31E29BDB6B3006489DC /* ViewController.swift */,
+				F725E33429BDBD86006489DC /* View */,
+				F725E33129BDBA00006489DC /* Controller */,
 				F725E32029BDB6B3006489DC /* Main.storyboard */,
 				F725E32629BDB6B4006489DC /* Assets.xcassets */,
 				F725E32829BDB6B4006489DC /* LaunchScreen.storyboard */,
@@ -70,6 +101,24 @@
 			path = "Simpy Note";
 			sourceTree = "<group>";
 		};
+		F725E33129BDBA00006489DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F725E31E29BDB6B3006489DC /* NoteViewController.swift */,
+				F725E33229BDBA17006489DC /* TaskViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F725E33429BDBD86006489DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F725E33629BDBDAF006489DC /* NoteTableViewCell.swift */,
+				F725E33729BDBDAF006489DC /* NoteTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F725E32E29BDB6B4006489DC /* Build configuration list for PBXNativeTarget "Simpy Note" */;
 			buildPhases = (
+				03EBB705E06E3CB2861E9546 /* [CP] Check Pods Manifest.lock */,
 				F725E31329BDB6B3006489DC /* Sources */,
 				F725E31429BDB6B3006489DC /* Frameworks */,
 				F725E31529BDB6B3006489DC /* Resources */,
+				8FFB9E8BE0BB2FD4D188BA29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,20 +182,65 @@
 				F725E32A29BDB6B4006489DC /* LaunchScreen.storyboard in Resources */,
 				F725E32729BDB6B4006489DC /* Assets.xcassets in Resources */,
 				F725E32229BDB6B3006489DC /* Main.storyboard in Resources */,
+				F725E33929BDBDAF006489DC /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03EBB705E06E3CB2861E9546 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simpy Note-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FFB9E8BE0BB2FD4D188BA29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simpy Note/Pods-Simpy Note-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simpy Note/Pods-Simpy Note-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simpy Note/Pods-Simpy Note-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F725E31329BDB6B3006489DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F725E31F29BDB6B3006489DC /* ViewController.swift in Sources */,
+				F725E31F29BDB6B3006489DC /* NoteViewController.swift in Sources */,
 				F725E31B29BDB6B3006489DC /* AppDelegate.swift in Sources */,
+				F725E33329BDBA17006489DC /* TaskViewController.swift in Sources */,
 				F725E32529BDB6B3006489DC /* Simpy_Note.xcdatamodeld in Sources */,
 				F725E31D29BDB6B3006489DC /* SceneDelegate.swift in Sources */,
+				F725E33829BDBDAF006489DC /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +382,7 @@
 		};
 		F725E32F29BDB6B4006489DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F50110833835F2C8017816 /* Pods-Simpy Note.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +411,7 @@
 		};
 		F725E33029BDB6B4006489DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8794AABDF0D682CE7ED22E8F /* Pods-Simpy Note.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
