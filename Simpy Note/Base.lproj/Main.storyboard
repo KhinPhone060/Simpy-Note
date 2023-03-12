@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="feY-S2-WL5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Task" image="pencil" catalog="system" id="aSc-yj-acI"/>
+                    <tabBarItem key="tabBarItem" title="Task" image="checkmark.square" catalog="system" selectedImage="checkmark.square.fill" id="aSc-yj-acI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXe-F2-Wjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,6 +41,8 @@
                             </label>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-VS-02L">
                                 <rect key="frame" x="0.0" y="94" width="390" height="57"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" name="BackgroundColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="yxV-1f-efs" id="LOl-Tq-mUm"/>
@@ -52,6 +54,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="610" id="0uE-9L-Ns9"/>
                                 </constraints>
+                                <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yxV-1f-efs" id="PZM-1R-gXm"/>
                                     <outlet property="delegate" destination="yxV-1f-efs" id="qVj-pN-HjT"/>
@@ -59,7 +62,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jC2-xD-G8V"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jC2-xD-G8V" firstAttribute="trailing" secondItem="Lfq-VS-02L" secondAttribute="trailing" id="BrP-3H-0rX"/>
                             <constraint firstItem="Lfq-VS-02L" firstAttribute="top" secondItem="y2b-F6-uL1" secondAttribute="bottom" constant="20" id="CkM-Vc-IYM"/>
@@ -72,7 +75,7 @@
                             <constraint firstItem="y2b-F6-uL1" firstAttribute="top" secondItem="jC2-xD-G8V" secondAttribute="top" id="tOw-V8-IRO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Note" image="note" catalog="system" selectedImage="note" id="0Bk-UV-7RY"/>
+                    <tabBarItem key="tabBarItem" title="Note" image="book.closed" catalog="system" selectedImage="book.closed.fill" id="0Bk-UV-7RY"/>
                     <connections>
                         <outlet property="noteTableView" destination="IEH-jE-QnH" id="el1-f8-lEb"/>
                     </connections>
@@ -174,17 +177,25 @@
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="note" catalog="system" width="128" height="107"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.9882352941176471" green="0.74117647058823533" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

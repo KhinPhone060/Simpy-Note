@@ -8,10 +8,14 @@
 import UIKit
 
 class NoteTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var containerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        containerView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
