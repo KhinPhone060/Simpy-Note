@@ -12,9 +12,4 @@ extension UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "homeViewController")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc!)
     }
-    
-    func navigateToNoteDetail() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "noteDetailViewController")
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc!)
-    }
 }

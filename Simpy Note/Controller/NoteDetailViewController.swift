@@ -30,12 +30,24 @@ class NoteDetailViewController: UIViewController {
         descriptionTextField.text = noteDescription
         addedDateLabel.text = addedDate ?? getTodayDate()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        saveNotes()
+    }
 }
 
 //MARK: - Data Manipulation
 extension NoteDetailViewController {
     
     @IBAction func savePressed(_ sender: UIButton) {
+        self.saveNotes()
+    }
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.navigateBackToHome()
+    }
+    
+    func saveNotes() {
         if indexId != nil {
             //update note
             notes[indexId!].setValue(titleTextField.text, forKey: "title")
@@ -51,14 +63,8 @@ extension NoteDetailViewController {
             self.notes.append(newNote)
             print("New note added.")
         }
-        self.saveNotes()
-    }
-    
-    @IBAction func backPressed(_ sender: UIButton) {
-        self.navigateBackToHome()
-    }
-    
-    func saveNotes() {
+        
+        //save the changes to context
         do {
             try context.save()
         } catch {

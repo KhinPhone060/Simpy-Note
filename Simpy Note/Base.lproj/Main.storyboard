@@ -78,6 +78,7 @@
                     <tabBarItem key="tabBarItem" title="Note" image="book.closed" catalog="system" selectedImage="book.closed.fill" id="0Bk-UV-7RY"/>
                     <connections>
                         <outlet property="noteTableView" destination="IEH-jE-QnH" id="el1-f8-lEb"/>
+                        <segue destination="vgR-mY-EII" kind="presentation" identifier="goToNoteDetail" modalPresentationStyle="fullScreen" id="Rce-el-pWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LF1-cc-vpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,7 +88,7 @@
         <!--Note Detail View Controller-->
         <scene sceneID="Tbd-xh-WXz">
             <objects>
-                <viewController storyboardIdentifier="noteDetailViewController" id="vgR-mY-EII" customClass="NoteDetailViewController" customModule="Simpy_Note" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vgR-mY-EII" customClass="NoteDetailViewController" customModule="Simpy_Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGv-pI-86T">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

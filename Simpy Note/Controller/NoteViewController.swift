@@ -56,6 +56,21 @@ extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configCell(note: notes[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToNoteDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! NoteDetailViewController
+        
+        if let indexPath = noteTableView.indexPathForSelectedRow {
+            destinationVC.noteTitle = notes[indexPath.row].title
+            destinationVC.noteDescription = notes[indexPath.row].noteDescription
+            destinationVC.indexId = indexPath.row //0
+            destinationVC.notes = notes
+        }
+    }
 }
 
 //MARK: - Data Manipulation
@@ -75,6 +90,6 @@ extension NoteViewController {
 //MARK: - Navigate
 extension NoteViewController {
     @objc func floatyBtnTapped() {
-        self.navigateToNoteDetail()
+        performSegue(withIdentifier: "goToNoteDetail", sender: self)
     }
 }
