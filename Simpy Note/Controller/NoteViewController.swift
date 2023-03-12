@@ -15,6 +15,15 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //floating action button
+        let floaty = Floaty()
+        floaty.sticky = true
+        floaty.buttonColor = UIColor(named: "AccentColor")!
+        floaty.plusColor = UIColor.white
+        noteTableView.addSubview(floaty)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.floatyBtnTapped))
+        
         //register cell
         let cellNib = UINib(nibName: "NoteTableViewCell", bundle: nil)
         noteTableView.register(cellNib, forCellReuseIdentifier: "NoteTableViewCell")
@@ -31,5 +40,10 @@ extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+}
+
+extension NoteViewController {
+    @objc func floatyBtnTapped() {
+        
+    }
 }

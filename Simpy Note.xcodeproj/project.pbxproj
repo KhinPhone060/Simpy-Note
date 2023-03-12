@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E486AD2A3E9CB55CA5D3D9F /* Pods_Simpy_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7984A8383A3BB8FA5DD8E1B3 /* Pods_Simpy_Note.framework */; };
+		F710DE6329BE0FB10026F44B /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F710DE6229BE0FB10026F44B /* NoteDetailViewController.swift */; };
 		F725E31B29BDB6B3006489DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31A29BDB6B3006489DC /* AppDelegate.swift */; };
 		F725E31D29BDB6B3006489DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31C29BDB6B3006489DC /* SceneDelegate.swift */; };
 		F725E31F29BDB6B3006489DC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31E29BDB6B3006489DC /* NoteViewController.swift */; };
@@ -24,6 +25,7 @@
 		7984A8383A3BB8FA5DD8E1B3 /* Pods_Simpy_Note.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simpy_Note.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8794AABDF0D682CE7ED22E8F /* Pods-Simpy Note.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpy Note.release.xcconfig"; path = "Target Support Files/Pods-Simpy Note/Pods-Simpy Note.release.xcconfig"; sourceTree = "<group>"; };
 		F6F50110833835F2C8017816 /* Pods-Simpy Note.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpy Note.debug.xcconfig"; path = "Target Support Files/Pods-Simpy Note/Pods-Simpy Note.debug.xcconfig"; sourceTree = "<group>"; };
+		F710DE6229BE0FB10026F44B /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		F725E31729BDB6B3006489DC /* Simpy Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simpy Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F725E31A29BDB6B3006489DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F725E31C29BDB6B3006489DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				F725E31E29BDB6B3006489DC /* NoteViewController.swift */,
 				F725E33229BDBA17006489DC /* TaskViewController.swift */,
+				F710DE6229BE0FB10026F44B /* NoteDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F725E31F29BDB6B3006489DC /* NoteViewController.swift in Sources */,
+				F710DE6329BE0FB10026F44B /* NoteDetailViewController.swift in Sources */,
 				F725E31B29BDB6B3006489DC /* AppDelegate.swift in Sources */,
 				F725E33329BDBA17006489DC /* TaskViewController.swift in Sources */,
 				F725E32529BDB6B3006489DC /* Simpy_Note.xcdatamodeld in Sources */,
