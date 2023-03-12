@@ -67,6 +67,9 @@
             <inset key="separatorInset" minX="200" minY="0.0" maxX="200" maxY="0.0"/>
             <connections>
                 <outlet property="containerView" destination="6JM-s2-mwg" id="KDW-ni-0nj"/>
+                <outlet property="dateLabel" destination="YRg-Yx-FuU" id="6Sm-59-EEb"/>
+                <outlet property="descriptionText" destination="umZ-mJ-Udh" id="FJ3-1y-Wqi"/>
+                <outlet property="titleText" destination="qxz-UH-Po6" id="qv8-Db-LoQ"/>
             </connections>
             <point key="canvasLocation" x="109.23076923076923" y="49.407582938388622"/>
         </tableViewCell>

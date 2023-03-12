@@ -79,6 +79,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		F710DE6829BE23690026F44B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F725E32329BDB6B3006489DC /* Simpy_Note.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F725E30E29BDB6B3006489DC = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +110,7 @@
 			children = (
 				F725E31A29BDB6B3006489DC /* AppDelegate.swift */,
 				F725E31C29BDB6B3006489DC /* SceneDelegate.swift */,
+				F710DE6829BE23690026F44B /* Model */,
 				F725E33429BDBD86006489DC /* View */,
 				F725E33129BDBA00006489DC /* Controller */,
 				F710DE6429BE1A3B0026F44B /* Extension */,
@@ -109,7 +118,6 @@
 				F725E32629BDB6B4006489DC /* Assets.xcassets */,
 				F725E32829BDB6B4006489DC /* LaunchScreen.storyboard */,
 				F725E32B29BDB6B4006489DC /* Info.plist */,
-				F725E32329BDB6B3006489DC /* Simpy_Note.xcdatamodeld */,
 			);
 			path = "Simpy Note";
 			sourceTree = "<group>";
