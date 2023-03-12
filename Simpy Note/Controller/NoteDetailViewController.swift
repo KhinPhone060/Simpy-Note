@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Toast
 
 class NoteDetailViewController: UIViewController {
     
@@ -53,7 +54,7 @@ extension NoteDetailViewController {
             notes[indexId!].setValue(titleTextField.text, forKey: "title")
             notes[indexId!].setValue(descriptionTextField.text, forKey: "noteDescription")
             notes[indexId!].setValue(addedDateLabel.text, forKey: "addedDate")
-            
+            self.view.makeToast("Saved")
         } else {
             //add new note
             let newNote = Note(context: context)
@@ -61,7 +62,7 @@ extension NoteDetailViewController {
             newNote.noteDescription = descriptionTextField.text
             newNote.addedDate = getTodayDate()
             self.notes.append(newNote)
-            print("New note added.")
+            self.view.makeToast("Saved")
         }
         
         //save the changes to context
