@@ -84,7 +84,7 @@
         <!--Note Detail View Controller-->
         <scene sceneID="Tbd-xh-WXz">
             <objects>
-                <viewController storyboardIdentifier="noteDetail" id="vgR-mY-EII" customClass="NoteDetailViewController" customModule="Simpy_Note" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="noteDetailViewController" id="vgR-mY-EII" customClass="NoteDetailViewController" customModule="Simpy_Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGv-pI-86T">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="backPressed:" destination="vgR-mY-EII" eventType="touchUpInside" id="C0S-19-Pmj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKh-ot-AcR">
                                 <rect key="frame" x="326" y="47" width="48" height="35"/>
@@ -143,15 +146,16 @@
                             <constraint firstItem="29c-xM-imO" firstAttribute="top" secondItem="c2s-L8-T6v" secondAttribute="bottom" constant="20" id="wk5-Ch-5G1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0cJ-oX-iIi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQq-o1-bOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524.6153846153845" y="-321.32701421800948"/>
+            <point key="canvasLocation" x="1563" y="-321"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gdA-9u-5Ic">
             <objects>
-                <tabBarController id="sxa-LT-h2B" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="homeViewController" id="sxa-LT-h2B" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QSx-7b-lhx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

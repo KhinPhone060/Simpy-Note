@@ -8,6 +8,8 @@
 import UIKit
 
 class NoteDetailViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +17,7 @@ class NoteDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.navigateBackToHome()
+    }
 }

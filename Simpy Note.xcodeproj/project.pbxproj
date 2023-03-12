@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E486AD2A3E9CB55CA5D3D9F /* Pods_Simpy_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7984A8383A3BB8FA5DD8E1B3 /* Pods_Simpy_Note.framework */; };
 		F710DE6329BE0FB10026F44B /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F710DE6229BE0FB10026F44B /* NoteDetailViewController.swift */; };
+		F710DE6629BE1A570026F44B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F710DE6529BE1A570026F44B /* Extension.swift */; };
 		F725E31B29BDB6B3006489DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31A29BDB6B3006489DC /* AppDelegate.swift */; };
 		F725E31D29BDB6B3006489DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31C29BDB6B3006489DC /* SceneDelegate.swift */; };
 		F725E31F29BDB6B3006489DC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E31E29BDB6B3006489DC /* NoteViewController.swift */; };
@@ -26,6 +27,7 @@
 		8794AABDF0D682CE7ED22E8F /* Pods-Simpy Note.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpy Note.release.xcconfig"; path = "Target Support Files/Pods-Simpy Note/Pods-Simpy Note.release.xcconfig"; sourceTree = "<group>"; };
 		F6F50110833835F2C8017816 /* Pods-Simpy Note.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpy Note.debug.xcconfig"; path = "Target Support Files/Pods-Simpy Note/Pods-Simpy Note.debug.xcconfig"; sourceTree = "<group>"; };
 		F710DE6229BE0FB10026F44B /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		F710DE6529BE1A570026F44B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F725E31729BDB6B3006489DC /* Simpy Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simpy Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F725E31A29BDB6B3006489DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F725E31C29BDB6B3006489DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F710DE6429BE1A3B0026F44B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F710DE6529BE1A570026F44B /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F725E30E29BDB6B3006489DC = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 				F725E31C29BDB6B3006489DC /* SceneDelegate.swift */,
 				F725E33429BDBD86006489DC /* View */,
 				F725E33129BDBA00006489DC /* Controller */,
+				F710DE6429BE1A3B0026F44B /* Extension */,
 				F725E32029BDB6B3006489DC /* Main.storyboard */,
 				F725E32629BDB6B4006489DC /* Assets.xcassets */,
 				F725E32829BDB6B4006489DC /* LaunchScreen.storyboard */,
@@ -245,6 +256,7 @@
 				F725E32529BDB6B3006489DC /* Simpy_Note.xcdatamodeld in Sources */,
 				F725E31D29BDB6B3006489DC /* SceneDelegate.swift in Sources */,
 				F725E33829BDBDAF006489DC /* NoteTableViewCell.swift in Sources */,
+				F710DE6629BE1A570026F44B /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
