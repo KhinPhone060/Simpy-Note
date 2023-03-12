@@ -33,6 +33,8 @@ class NoteDetailViewController: UIViewController {
         addedDateLabel.text = addedDate ?? getTodayDate()
         
         saveBtn.isEnabled = false
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
