@@ -77,12 +77,39 @@ extension TaskViewController {
     }
     
     func loadTasks(with request: NSFetchRequest<Task> = Task.fetchRequest(),predicate: NSPredicate? = nil) {
+        
+        if let additionPredicate = predicate {
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [additionPredicate])
+        }
         do {
            tasks = try context.fetch(request)
         } catch {
             print("Error fetching data from context \(error)")
         }
         taskTableView.reloadData()
+    }
+}
+
+//MARK: - Search Bar Methods
+extension TaskViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Task> = Task.fetchRequest()
+        
+        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        loadTasks(with: request, predicate: predicate)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadTasks()
+            
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
     }
 }
 
