@@ -36,12 +36,6 @@ class NoteDetailViewController: UIViewController {
         
         self.hideKeyboardWhenTappedAround()
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        if titleTextField.text != "" || descriptionTextField.text != "" {
-            saveNotes()
-        }
-    }
 }
 
 //MARK: - UITextFieldDelegate & UITextViewDelegate
