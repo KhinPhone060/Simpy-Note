@@ -27,6 +27,12 @@ class TaskTableViewCell: UITableViewCell {
     
     func configCell(task: Task) {
         titleLabel.text = task.title
+        
+        if task.done == true {
+            checkBoxView.image = UIImage(named: "checked")
+        } else {
+            checkBoxView.image = UIImage(named: "unchecked")
+        }
     }
     
 }

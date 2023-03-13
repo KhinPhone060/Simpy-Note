@@ -53,6 +53,12 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configCell(task: tasks[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tasks[indexPath.row].done = !tasks[indexPath.row].done
+        self.saveTasks()
+        taskTableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 //MARK: - Data Manipulation Methods
