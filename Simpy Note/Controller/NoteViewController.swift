@@ -121,7 +121,7 @@ extension NoteViewController {
                 
                 alert.addAction(cancelAction)
                 alert.addAction(deleteAction)
-                self.present(alert, animated: true)
+                present(alert, animated: true)
             }
         }
     }

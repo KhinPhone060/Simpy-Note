@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Floaty
+import CoreData
 
 class TaskViewController: UIViewController {
     
@@ -13,6 +15,18 @@ class TaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //floating action button
+        let floaty = Floaty()
+        floaty.sticky = true
+        floaty.buttonColor = UIColor(named: "AccentColor")!
+        floaty.plusColor = UIColor.white
+        
+        //add gesture for floaty btn
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.floatyBtnTapped))
+        floaty.addGestureRecognizer(gesture)
+        
+        taskTableView.addSubview(floaty)
 
         //register cell
         let cellNib = UINib(nibName: "TaskTableViewCell", bundle: nil)
@@ -30,6 +44,27 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell", for: indexPath) as! TaskTableViewCell
         return cell
     }
-    
-    
+}
+
+//MARK: - Others
+extension TaskViewController {
+    @objc func floatyBtnTapped() {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add new item", message: nil, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let addAction = UIAlertAction(title: "Add Item", style: .default) { (action) in
+
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new Item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
+        present(alert, animated: true)
+    }
 }
