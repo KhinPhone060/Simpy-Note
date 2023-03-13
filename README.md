@@ -15,7 +15,7 @@ This is an iOS Note App I've developed to learn Core Data. User can create notes
 
 1. Download the repository
 ```bash
-  $ git clone hhttps://github.com/KhinPhone060/Simpy-Note.git
+  $ git clone https://github.com/KhinPhone060/Simpy-Note.git
   $ cd Simpy-Note
 ```
 2. Pod
