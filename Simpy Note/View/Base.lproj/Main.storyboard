@@ -16,14 +16,56 @@
                     <view key="view" contentMode="scaleToFill" id="FDe-mz-i9C">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCK-Tf-Tcx">
+                                <rect key="frame" x="166.66666666666666" y="47" width="57" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search for tasks" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-VG-1as">
+                                <rect key="frame" x="5" y="94" width="380" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BMo-gu-tSJ"/>
+                                </constraints>
+                                <color key="barTintColor" name="BackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yxV-1f-efs" id="O0o-VA-tcc"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LOJ-tk-WGi">
+                                <rect key="frame" x="0.0" y="154" width="390" height="607"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="p25-oP-aJH" id="xLf-sD-9FB"/>
+                                    <outlet property="delegate" destination="p25-oP-aJH" id="u5E-f0-CHF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="feY-S2-WL5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xCK-Tf-Tcx" firstAttribute="centerX" secondItem="feY-S2-WL5" secondAttribute="centerX" id="8QC-tJ-Fhi"/>
+                            <constraint firstItem="xCK-Tf-Tcx" firstAttribute="top" secondItem="feY-S2-WL5" secondAttribute="top" id="Bcl-Us-xGZ"/>
+                            <constraint firstItem="feY-S2-WL5" firstAttribute="bottom" secondItem="LOJ-tk-WGi" secondAttribute="bottom" id="Kz9-Qj-OZ2"/>
+                            <constraint firstItem="LOJ-tk-WGi" firstAttribute="leading" secondItem="feY-S2-WL5" secondAttribute="leading" id="WRw-sr-yHC"/>
+                            <constraint firstItem="feY-S2-WL5" firstAttribute="trailing" secondItem="LOJ-tk-WGi" secondAttribute="trailing" id="YpO-PC-BEm"/>
+                            <constraint firstItem="LOJ-tk-WGi" firstAttribute="top" secondItem="6RE-VG-1as" secondAttribute="bottom" id="Zqq-nD-sei"/>
+                            <constraint firstItem="6RE-VG-1as" firstAttribute="leading" secondItem="feY-S2-WL5" secondAttribute="leading" constant="5" id="gDv-8Y-Cdo"/>
+                            <constraint firstItem="6RE-VG-1as" firstAttribute="top" secondItem="xCK-Tf-Tcx" secondAttribute="bottom" constant="20" id="scz-ak-BeW"/>
+                            <constraint firstItem="feY-S2-WL5" firstAttribute="trailing" secondItem="6RE-VG-1as" secondAttribute="trailing" constant="5" id="tZy-0M-4Hs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Task" image="checkmark.square" catalog="system" selectedImage="checkmark.square.fill" id="aSc-yj-acI"/>
+                    <connections>
+                        <outlet property="taskTableView" destination="LOJ-tk-WGi" id="FRm-OE-ay7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXe-F2-Wjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="345"/>
+            <point key="canvasLocation" x="696.92307692307691" y="344.78672985781986"/>
         </scene>
         <!--Note-->
         <scene sceneID="ywv-WQ-5GC">
@@ -39,7 +81,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-jE-QnH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-jE-QnH">
                                 <rect key="frame" x="0.0" y="154" width="390" height="607"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
@@ -48,7 +90,7 @@
                                     <outlet property="delegate" destination="yxV-1f-efs" id="qVj-pN-HjT"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-VS-02L">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search for notes" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-VS-02L">
                                 <rect key="frame" x="5" y="94" width="380" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -122,6 +164,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29c-xM-imO">
                                 <rect key="frame" x="16" y="180" width="358" height="630"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                 <connections>

@@ -20,6 +20,8 @@
 		F725E33329BDBA17006489DC /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E33229BDBA17006489DC /* TaskViewController.swift */; };
 		F725E33829BDBDAF006489DC /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725E33629BDBDAF006489DC /* NoteTableViewCell.swift */; };
 		F725E33929BDBDAF006489DC /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725E33729BDBDAF006489DC /* NoteTableViewCell.xib */; };
+		F74558DC29BEDC44007A3610 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74558DA29BEDC44007A3610 /* TaskTableViewCell.swift */; };
+		F74558DD29BEDC44007A3610 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74558DB29BEDC44007A3610 /* TaskTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F725E33229BDBA17006489DC /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		F725E33629BDBDAF006489DC /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		F725E33729BDBDAF006489DC /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		F74558DA29BEDC44007A3610 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		F74558DB29BEDC44007A3610 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +118,6 @@
 				F725E33429BDBD86006489DC /* View */,
 				F725E33129BDBA00006489DC /* Controller */,
 				F710DE6429BE1A3B0026F44B /* Extension */,
-				F725E32029BDB6B3006489DC /* Main.storyboard */,
 				F725E32629BDB6B4006489DC /* Assets.xcassets */,
 				F725E32829BDB6B4006489DC /* LaunchScreen.storyboard */,
 				F725E32B29BDB6B4006489DC /* Info.plist */,
@@ -135,8 +138,11 @@
 		F725E33429BDBD86006489DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F74558DA29BEDC44007A3610 /* TaskTableViewCell.swift */,
 				F725E33629BDBDAF006489DC /* NoteTableViewCell.swift */,
 				F725E33729BDBDAF006489DC /* NoteTableViewCell.xib */,
+				F74558DB29BEDC44007A3610 /* TaskTableViewCell.xib */,
+				F725E32029BDB6B3006489DC /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 				F725E32729BDB6B4006489DC /* Assets.xcassets in Resources */,
 				F725E32229BDB6B3006489DC /* Main.storyboard in Resources */,
 				F725E33929BDBDAF006489DC /* NoteTableViewCell.xib in Resources */,
+				F74558DD29BEDC44007A3610 /* TaskTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +266,7 @@
 			files = (
 				F725E31F29BDB6B3006489DC /* NoteViewController.swift in Sources */,
 				F710DE6329BE0FB10026F44B /* NoteDetailViewController.swift in Sources */,
+				F74558DC29BEDC44007A3610 /* TaskTableViewCell.swift in Sources */,
 				F725E31B29BDB6B3006489DC /* AppDelegate.swift in Sources */,
 				F725E33329BDBA17006489DC /* TaskViewController.swift in Sources */,
 				F725E32529BDB6B3006489DC /* Simpy_Note.xcdatamodeld in Sources */,
