@@ -30,8 +30,10 @@ class TaskTableViewCell: UITableViewCell {
         
         if task.done == true {
             checkBoxView.image = UIImage(named: "checked")
+            titleLabel.textColor = UIColor(named: "GrayColor")
         } else {
             checkBoxView.image = UIImage(named: "unchecked")
+            titleLabel.textColor = UIColor(named: "BlackColor")
         }
     }
     

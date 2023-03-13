@@ -38,6 +38,10 @@ class TaskViewController: UIViewController {
         let cellNib = UINib(nibName: "TaskTableViewCell", bundle: nil)
         taskTableView.register(cellNib, forCellReuseIdentifier: "TaskTableViewCell")
         
+        //longpress on cell
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender: )))
+        taskTableView.addGestureRecognizer(longPressRecognizer)
+        
         loadTasks()
     }
 }
@@ -106,5 +110,31 @@ extension TaskViewController {
         alert.addAction(cancelAction)
         alert.addAction(addAction)
         present(alert, animated: true)
+    }
+    
+    @objc func longPress(sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            let touchPoint = sender.location(in: taskTableView)
+            if let indexPath = taskTableView.indexPathForRow(at: touchPoint) {
+                let alert = UIAlertController(title: "Delete task", message: "Delete 1 item?", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                let deleteAction = UIAlertAction(title: "Delete", style: .destructive) {_ in
+                    
+                    //delete note
+                    self.context.delete(self.tasks[indexPath.row])
+                    self.tasks.remove(at: indexPath.row)
+                    do {
+                        try self.context.save()
+                    } catch {
+                        print("Error in deleting data \(error)")
+                    }
+                    self.taskTableView.reloadData()
+                }
+                
+                alert.addAction(cancelAction)
+                alert.addAction(deleteAction)
+                present(alert, animated: true)
+            }
+        }
     }
 }
