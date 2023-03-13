@@ -10,6 +10,8 @@ import UIKit
 class TaskTableViewCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var checkBoxView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +23,10 @@ class TaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configCell(task: Task) {
+        titleLabel.text = task.title
     }
     
 }

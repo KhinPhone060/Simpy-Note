@@ -19,17 +19,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsX-WP-wKX">
-                        <rect key="frame" x="15" y="5" width="290" height="70"/>
+                        <rect key="frame" x="15" y="5.0000000000000036" width="290" height="56.333333333333343"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eXj-7U-aTJ">
-                                <rect key="frame" x="20" y="19.666666666666664" width="30" height="31.000000000000007"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="eXj-7U-aTJ">
+                                <rect key="frame" x="20" y="18" width="30" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Whl-XU-e1s"/>
+                                    <constraint firstAttribute="height" constant="30" id="lDG-2U-sRP"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWw-Lq-Hj5">
-                                <rect key="frame" x="58" y="17" width="45.666666666666657" height="34"/>
+                                <rect key="frame" x="70" y="17" width="45.666666666666657" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +38,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fWw-Lq-Hj5" firstAttribute="leading" secondItem="eXj-7U-aTJ" secondAttribute="trailing" constant="8" symbolic="YES" id="346-Mk-yA3"/>
+                            <constraint firstItem="fWw-Lq-Hj5" firstAttribute="leading" secondItem="eXj-7U-aTJ" secondAttribute="trailing" constant="20" id="346-Mk-yA3"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fWw-Lq-Hj5" secondAttribute="trailing" constant="20" id="GVr-B0-sxk"/>
                             <constraint firstAttribute="bottom" secondItem="fWw-Lq-Hj5" secondAttribute="bottom" constant="19" id="P03-tj-js8"/>
                             <constraint firstItem="fWw-Lq-Hj5" firstAttribute="top" secondItem="bsX-WP-wKX" secondAttribute="top" constant="17" id="Pbk-41-pyt"/>
@@ -57,13 +58,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkBoxView" destination="eXj-7U-aTJ" id="CMV-QF-vkT"/>
                 <outlet property="containerView" destination="bsX-WP-wKX" id="9fB-y7-0vz"/>
+                <outlet property="titleLabel" destination="fWw-Lq-Hj5" id="7eP-EI-tjR"/>
             </connections>
             <point key="canvasLocation" x="127.69230769230769" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="unchecked" width="100" height="100"/>
         <namedColor name="BackgroundColor">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
