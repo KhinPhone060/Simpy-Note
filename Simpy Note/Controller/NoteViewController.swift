@@ -49,7 +49,7 @@ class NoteViewController: UIViewController {
     }
 }
 
-//MARK: - UI Table View Delegate and DataSource
+//MARK: - UI Table View Methods
 extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
@@ -79,7 +79,12 @@ extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: - Data Manipulation
 extension NoteViewController {
-    func loadNotes(with request: NSFetchRequest<Note> = Note.fetchRequest()) {
+    func loadNotes(with request: NSFetchRequest<Note> = Note.fetchRequest(),predicate: NSPredicate? = nil) {
+        
+        if let additionPredicate = predicate {
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [additionPredicate])
+        }
+        
         do {
             notes = try context.fetch(request)
         } catch {
@@ -117,6 +122,29 @@ extension NoteViewController {
                 alert.addAction(cancelAction)
                 alert.addAction(deleteAction)
                 self.present(alert, animated: true)
+            }
+        }
+    }
+}
+
+//MARK: - Search Bar Methods
+extension NoteViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Note> = Note.fetchRequest()
+        
+        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        loadNotes(with: request, predicate: predicate)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadNotes()
+            
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
             }
         }
     }
