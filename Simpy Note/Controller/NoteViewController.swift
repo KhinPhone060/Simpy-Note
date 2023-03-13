@@ -37,6 +37,10 @@ class NoteViewController: UIViewController {
         let cellNib = UINib(nibName: "NoteTableViewCell", bundle: nil)
         noteTableView.register(cellNib, forCellReuseIdentifier: "NoteTableViewCell")
         
+        //longpress on cell
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender: )))
+        noteTableView.addGestureRecognizer(longPressRecognizer)
+        
         loadNotes()
     }
     
@@ -83,13 +87,37 @@ extension NoteViewController {
         }
         noteTableView.reloadData()
     }
-    
-    
 }
 
-//MARK: - Navigate
+//MARK: - Others
 extension NoteViewController {
     @objc func floatyBtnTapped() {
         performSegue(withIdentifier: "goToNoteDetail", sender: self)
+    }
+    
+    @objc func longPress(sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            let touchPoint = sender.location(in: noteTableView)
+            if let indexPath = noteTableView.indexPathForRow(at: touchPoint) {
+                let alert = UIAlertController(title: "Delete note", message: "Delete 1 item?", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                let deleteAction = UIAlertAction(title: "Delete", style: .destructive) {_ in
+                    
+                    //delete note
+                    self.context.delete(self.notes[indexPath.row])
+                    self.notes.remove(at: indexPath.row)
+                    do {
+                        try self.context.save()
+                    } catch {
+                        print("Error in deleting data \(error)")
+                    }
+                    self.noteTableView.reloadData()
+                }
+                
+                alert.addAction(cancelAction)
+                alert.addAction(deleteAction)
+                self.present(alert, animated: true)
+            }
+        }
     }
 }

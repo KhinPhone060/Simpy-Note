@@ -39,20 +39,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-VS-02L">
-                                <rect key="frame" x="0.0" y="94" width="390" height="57"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="Hfs-ct-ZD1"/>
-                                </constraints>
-                                <color key="barTintColor" name="BackgroundColor"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="yxV-1f-efs" id="LOl-Tq-mUm"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-jE-QnH">
-                                <rect key="frame" x="0.0" y="151" width="390" height="610"/>
+                                <rect key="frame" x="0.0" y="154" width="390" height="607"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
                                 <connections>
@@ -60,19 +48,31 @@
                                     <outlet property="delegate" destination="yxV-1f-efs" id="qVj-pN-HjT"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-VS-02L">
+                                <rect key="frame" x="5" y="94" width="380" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hfs-ct-ZD1"/>
+                                </constraints>
+                                <color key="barTintColor" name="BackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yxV-1f-efs" id="LOl-Tq-mUm"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jC2-xD-G8V"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jC2-xD-G8V" firstAttribute="trailing" secondItem="Lfq-VS-02L" secondAttribute="trailing" id="BrP-3H-0rX"/>
+                            <constraint firstItem="jC2-xD-G8V" firstAttribute="trailing" secondItem="Lfq-VS-02L" secondAttribute="trailing" constant="5" id="6Lg-RW-Oct"/>
                             <constraint firstItem="Lfq-VS-02L" firstAttribute="top" secondItem="y2b-F6-uL1" secondAttribute="bottom" constant="20" id="CkM-Vc-IYM"/>
                             <constraint firstItem="y2b-F6-uL1" firstAttribute="centerX" secondItem="jC2-xD-G8V" secondAttribute="centerX" id="KRY-nX-MLG"/>
                             <constraint firstItem="IEH-jE-QnH" firstAttribute="top" secondItem="Lfq-VS-02L" secondAttribute="bottom" id="UZh-7A-5tC"/>
                             <constraint firstItem="jC2-xD-G8V" firstAttribute="bottom" secondItem="IEH-jE-QnH" secondAttribute="bottom" id="cRG-ar-K9G"/>
                             <constraint firstItem="IEH-jE-QnH" firstAttribute="leading" secondItem="jC2-xD-G8V" secondAttribute="leading" id="fo9-NN-G57"/>
-                            <constraint firstItem="Lfq-VS-02L" firstAttribute="leading" secondItem="jC2-xD-G8V" secondAttribute="leading" id="iQa-Wz-JdX"/>
                             <constraint firstItem="jC2-xD-G8V" firstAttribute="trailing" secondItem="IEH-jE-QnH" secondAttribute="trailing" id="svC-sn-m6R"/>
                             <constraint firstItem="y2b-F6-uL1" firstAttribute="top" secondItem="jC2-xD-G8V" secondAttribute="top" id="tOw-V8-IRO"/>
+                            <constraint firstItem="Lfq-VS-02L" firstAttribute="leading" secondItem="jC2-xD-G8V" secondAttribute="leading" constant="5" id="tQh-3w-VkS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Note" image="book.closed" catalog="system" selectedImage="book.closed.fill" id="0Bk-UV-7RY"/>
