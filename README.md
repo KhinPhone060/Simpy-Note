@@ -18,12 +18,17 @@ This is an iOS Note App I've developed to learn Core Data. User can create notes
   $ git clone https://github.com/KhinPhone060/Simpy-Note.git
   $ cd Simpy-Note
 ```
-2. Pod
+2. In Podfile
+```bash
+pod 'Floaty', '~> 4.2.0'
+pod 'Toast', '~> 4.0.0'
+```
+3. Pod
 ```bash
 pod install
 ```
-3. Open the project in XCode
+4. Open the project in XCode
 ```bash
 $ open SimpyNote.xcodeprj
 ```
-4. Compile and run in your XCode simulator
+5. Compile and run in your XCode simulator
